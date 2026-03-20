@@ -63,10 +63,12 @@ export default function Challenge() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.9 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-highlight/10 rounded-full mb-6 justify-center lg:justify-start mx-auto lg:mx-0">
-              <div className="w-2 h-2 bg-brand-highlight rounded-full" />
-              <span className="text-brand-primary font-roboto font-medium">O Desafio</span>
-              <div className="w-2 h-2 bg-brand-highlight rounded-full" />
+            <div className="flex justify-center lg:justify-start mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-highlight/10 rounded-full">
+                <div className="w-2 h-2 bg-brand-highlight rounded-full" />
+                <span className="text-brand-primary font-roboto font-medium">O Desafio</span>
+                <div className="w-2 h-2 bg-brand-highlight rounded-full" />
+              </div>
             </div>
 
             <motion.h2
@@ -121,51 +123,53 @@ export default function Challenge() {
             </motion.a>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.2 }}
-            className="relative"
-          >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <motion.img
-                style={{ scale: imageScale, y: imageY, filter: imageBlur }}
-                src="/problema-entrega.webp"
-                alt="Desafio das entregas"
-                className="w-full h-[500px] object-cover origin-center will-change-transform"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/70 via-brand-primary/10 to-transparent" />
-            </div>
-
+          <div className="relative">
             <motion.div
-              initial={{ opacity: 0, y: 30, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ delay: 0.55 }}
-              className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-gray-100 max-w-xs"
+              initial={{ opacity: 0, x: 50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="relative pb-14 lg:pb-0"
             >
-              <div className="text-3xl font-outfit font-bold text-brand-highlight mb-1">
-                R$1,5 trilhão
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <motion.img
+                  style={{ scale: imageScale, y: imageY, filter: imageBlur }}
+                  src="/problema-entrega.webp"
+                  alt="Desafio das entregas"
+                  className="w-full h-[500px] object-cover origin-center will-change-transform"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/70 via-brand-primary/10 to-transparent" />
               </div>
-              <div className="text-sm text-gray-600 font-roboto">
-                logística no Brasil movimenta anualmente
-              </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20, y: -10 }}
-              animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
-              transition={{ delay: 0.65 }}
-              className="absolute -top-6 -right-6 bg-brand-highlight text-brand-primary rounded-2xl p-4 shadow-xl"
-            >
-              <div className="text-xl font-outfit font-bold">24/7</div>
-              <div className="text-xs font-roboto opacity-90">disponibilidade</div>
+              <motion.div
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                transition={{ delay: 0.55 }}
+                className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-gray-100 max-w-xs z-10"
+              >
+                <div className="text-3xl font-outfit font-bold text-brand-highlight mb-1">
+                  R$1,5 trilhão
+                </div>
+                <div className="text-sm text-gray-600 font-roboto">
+                  logística no Brasil movimenta anualmente
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20, y: -10 }}
+                animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
+                transition={{ delay: 0.65 }}
+                className="absolute -top-6 -right-6 bg-brand-highlight text-brand-primary rounded-2xl p-4 shadow-xl z-10"
+              >
+                <div className="text-xl font-outfit font-bold">24/7</div>
+                <div className="text-xs font-roboto opacity-90">disponibilidade</div>
+              </motion.div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.95 }}
-              className="flex justify-center mt-10 lg:hidden"
+              className="flex justify-center lg:hidden relative z-20 mt-8"
             >
               <a
                 href="#contato"
@@ -174,7 +178,7 @@ export default function Challenge() {
                 Conheça a solução
               </a>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
