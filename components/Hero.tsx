@@ -80,7 +80,7 @@ export default function Hero() {
           >
             <motion.h1
               variants={itemVariants}
-              className="text-5xl lg:text-7xl font-outfit font-bold text-white leading-[1.05] tracking-tight"
+              className="text-5xl lg:text-7xl font-outfit font-bold text-white leading-[1.05] tracking-tight text-center lg:text-left"
             >
               Entregas inteligentes{' '}
               <span className="relative inline-block">
@@ -96,13 +96,16 @@ export default function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="text-xl text-white/80 font-roboto leading-relaxed max-w-lg"
+              className="text-xl text-white/80 font-roboto leading-relaxed max-w-lg text-center lg:text-left mx-auto lg:mx-0"
             >
               Lockers conectados a uma plataforma completa para automatizar
               entregas, retiradas e gestão logística.
             </motion.p>
 
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
               <a
                 href="#contato"
                 className="group px-8 py-4 bg-brand-secondary text-white font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] flex items-center justify-center gap-2 shadow-lg shadow-brand-secondary/30"
