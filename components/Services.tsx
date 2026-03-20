@@ -123,6 +123,7 @@ export default function Services() {
               <div
                 key={seg.id}
                 onMouseEnter={() => setActive(i)}
+                onClick={() => setActive(i)}
                 className={`w-full text-left transition-all duration-300 rounded-xl overflow-hidden group cursor-pointer ${
                   active === i ? 'bg-white shadow-lg' : 'bg-transparent hover:bg-gray-50'
                 }`}
@@ -182,7 +183,7 @@ export default function Services() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.7 }}
-            className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl"
+            className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl hidden lg:block"
           >
             <AnimatePresence mode="wait">
               <motion.img
