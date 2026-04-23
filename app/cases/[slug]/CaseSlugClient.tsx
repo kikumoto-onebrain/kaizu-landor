@@ -133,7 +133,7 @@ export default function CaseSlugClient({ item }: { item: Case }) {
       <section className="bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 py-16">
           <Link
-            href="/cases-de-sucesso"
+            href="/cases"
             className="inline-flex items-center gap-2 text-sm font-roboto text-gray-500 hover:text-brand-primary transition-colors mb-10 group"
           >
             <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" />
@@ -198,7 +198,7 @@ export default function CaseSlugClient({ item }: { item: Case }) {
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <Link
-            href="/cases-de-sucesso"
+            href="/cases"
             className="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white font-roboto font-medium rounded-sm hover:bg-brand-primary/90 transition-all hover:scale-105"
           >
             <ArrowLeft size={16} />
