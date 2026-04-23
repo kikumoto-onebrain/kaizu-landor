@@ -85,6 +85,13 @@ export default function Navbar() {
               Tecnologia
             </a>
 
+            <a
+              href="#contato"
+              className="px-6 py-3 bg-brand-secondary text-white font-roboto font-medium rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-105"
+            >
+              Solicite uma demonstração
+            </a>
+
             <div className={`w-px h-6 ${isScrolled ? 'bg-gray-200' : 'bg-white/20'}`} />
 
             <Image
@@ -94,13 +101,6 @@ export default function Navbar() {
               height={40}
               className="h-9 w-auto opacity-90"
             />
-
-            <a
-              href="#contato"
-              className="px-6 py-3 bg-brand-secondary text-white font-roboto font-medium rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-105"
-            >
-              Solicite uma demonstração
-            </a>
           </div>
 
           <button
