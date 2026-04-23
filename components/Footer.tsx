@@ -19,15 +19,7 @@ export default function Footer() {
               alt="Stoom"
               width={160}
               height={48}
-              className="h-10 w-auto mb-4"
-            />
-
-            <Image
-              src="/selo-sites.svg"
-              alt="Selo Sites"
-              width={160}
-              height={80}
-              className="w-[160px] h-auto"
+              className="h-10 w-auto"
             />
           </div>
 

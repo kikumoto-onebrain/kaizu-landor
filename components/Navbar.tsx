@@ -85,6 +85,16 @@ export default function Navbar() {
               Tecnologia
             </a>
 
+            <div className={`w-px h-6 ${isScrolled ? 'bg-gray-200' : 'bg-white/20'}`} />
+
+            <Image
+              src="/selo-sites.svg"
+              alt="Selo de Qualidade"
+              width={80}
+              height={40}
+              className="h-9 w-auto opacity-90"
+            />
+
             <a
               href="#contato"
               className="px-6 py-3 bg-brand-secondary text-white font-roboto font-medium rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-105"
@@ -151,6 +161,16 @@ export default function Navbar() {
               >
                 Solicitar Demonstração
               </a>
+
+              <div className="flex justify-center pt-2 pb-1">
+                <Image
+                  src="/selo-sites.svg"
+                  alt="Selo de Qualidade"
+                  width={100}
+                  height={50}
+                  className="h-10 w-auto opacity-80"
+                />
+              </div>
             </div>
           </motion.div>
         )}
