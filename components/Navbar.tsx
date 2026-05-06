@@ -108,7 +108,7 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a href="/#solucao" className={linkClass}>Solução</a>
+            <Link href="/smart-locker" className={linkClass}>Solução</Link>
             <a href="/#segmentos" className={linkClass}>Segmentos</a>
             <Link href="/cases" className={linkClass}>Cases</Link>
             <Link href="/conteudos" className={linkClass}>Conteúdos</Link>
@@ -188,13 +188,13 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <a
-                href="/#solucao"
+              <Link
+                href="/smart-locker"
                 className="block text-brand-primary hover:text-brand-highlight font-roboto font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Solução
-              </a>
+              </Link>
 
               <a
                 href="/#segmentos"
