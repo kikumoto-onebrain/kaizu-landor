@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 const outfit = localFont({
@@ -141,6 +142,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {children}
         <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   );
