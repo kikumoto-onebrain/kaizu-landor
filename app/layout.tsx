@@ -131,6 +131,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TLN423QH');`,
           }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-S12SFW8SV2"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="ga4-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-S12SFW8SV2');`,
+          }}
+        />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TLN423QH"
