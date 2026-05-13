@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { Linkedin, Instagram } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/stoom-ecommerce/', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://www.instagram.com/stoom_tecnologia_/', label: 'Instagram' },
 ];
 
 export default function Footer() {
