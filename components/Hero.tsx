@@ -94,13 +94,10 @@ export default function Hero() {
               </span>
             </motion.h1>
 
-            <motion.p
-              variants={itemVariants}
-              className="text-xl text-white/80 font-roboto leading-relaxed max-w-lg text-center lg:text-left mx-auto lg:mx-0"
-            >
+            <p className="text-xl text-white/80 font-roboto leading-relaxed max-w-lg text-center lg:text-left mx-auto lg:mx-0">
               Lockers conectados a uma plataforma completa para automatizar
               entregas, retiradas e gestão logística.
-            </motion.p>
+            </p>
 
             <motion.div
               variants={itemVariants}

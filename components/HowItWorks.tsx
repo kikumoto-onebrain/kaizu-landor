@@ -228,7 +228,7 @@ export default function HowItWorks() {
                       }}
                       className="absolute -top-2 -right-2 w-7 h-7 bg-brand-secondary rounded-full flex items-center justify-center shadow-md"
                     >
-                      <span className="text-white text-[10px] font-outfit font-bold">
+                      <span className="text-brand-primary text-[10px] font-outfit font-bold">
                         {step.step}
                       </span>
                     </motion.div>

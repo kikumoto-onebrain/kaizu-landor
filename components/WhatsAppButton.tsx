@@ -13,6 +13,7 @@ export default function WhatsAppButton() {
       href="https://wa.me/5519971525530?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20lockers%20da%20Stoom."
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Fale conosco pelo WhatsApp"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.4, delay: 1 }}
