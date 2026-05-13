@@ -5,15 +5,15 @@ const fs = require('fs');
 const publicDir = path.join(__dirname, '..', 'public');
 
 const images = [
-  // Segment images: exibidas em ~584px, 2x = 1168px → max 1200px, quality 80
-  { file: 'problema-entrega.webp',  maxDim: 1200, quality: 80 },
-  { file: 'condominio-locker.webp', maxDim: 1200, quality: 80 },
-  { file: 'logistica-locker.webp',  maxDim: 1200, quality: 80 },
-  { file: 'industria-locker.webp',  maxDim: 1200, quality: 80 },
-  { file: 'varejo-locker.webp',     maxDim: 1200, quality: 80 },
-  // Utility images: exibidas em ~494×256px, 2x = 988×512px → quality 75
-  { file: 'smartlocker.webp', maxDim: 1000, quality: 75 },
-  { file: 'app.webp',         maxDim: 1000, quality: 75 },
+  // Segment images: exibidas em ~560-584px → 800px (~1.4x retina), quality 80
+  { file: 'problema-entrega.webp',  maxDim: 800, quality: 80 },
+  { file: 'condominio-locker.webp', maxDim: 800, quality: 80 },
+  { file: 'logistica-locker.webp',  maxDim: 800, quality: 80 },
+  { file: 'industria-locker.webp',  maxDim: 800, quality: 80 },
+  { file: 'varejo-locker.webp',     maxDim: 800, quality: 80 },
+  // Utility images: exibidas em ~494×256px → 600px (~1.2x retina), quality 75
+  { file: 'smartlocker.webp', maxDim: 600, quality: 75 },
+  { file: 'app.webp',         maxDim: 600, quality: 75 },
 ];
 
 async function optimizeAll() {
