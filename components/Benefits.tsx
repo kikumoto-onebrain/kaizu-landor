@@ -92,7 +92,7 @@ export default function Benefits() {
             >
               <a
                 href="#contato"
-                className="inline-flex min-h-[56px] items-center justify-center rounded-sm bg-brand-secondary px-8 sm:px-10 py-4 text-base font-roboto font-semibold text-white shadow-lg shadow-brand-secondary/20 transition-all duration-300 hover:scale-[1.03] hover:bg-brand-secondary/90"
+                className="inline-flex min-h-[56px] items-center justify-center rounded-sm bg-brand-secondary px-8 sm:px-10 py-4 text-base font-roboto font-semibold text-black shadow-lg shadow-brand-secondary/20 transition-all duration-300 hover:scale-[1.03] hover:bg-brand-secondary/90"
               >
                 <span className="whitespace-nowrap">Solicite uma demonstração</span>
               </a>
@@ -126,7 +126,7 @@ export default function Benefits() {
             >
               <a
                 href="#contato"
-                className="inline-flex min-h-[56px] items-center justify-center rounded-sm bg-brand-secondary px-8 sm:px-10 py-4 text-base font-roboto font-semibold text-white shadow-lg shadow-brand-secondary/20 transition-all duration-300 hover:scale-[1.03] hover:bg-brand-secondary/90"
+                className="inline-flex min-h-[56px] items-center justify-center rounded-sm bg-brand-secondary px-8 sm:px-10 py-4 text-base font-roboto font-semibold text-black shadow-lg shadow-brand-secondary/20 transition-all duration-300 hover:scale-[1.03] hover:bg-brand-secondary/90"
               >
                 <span className="whitespace-nowrap">Solicite uma demonstração</span>
               </a>

@@ -115,7 +115,7 @@ export default function Navbar() {
 
             <a
               href="/#contato"
-              className="px-6 py-3 bg-brand-secondary text-white font-roboto font-medium rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-105"
+              className="px-6 py-3 bg-brand-secondary text-black font-roboto font-medium rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-105"
             >
               Solicite uma demonstração
             </a>
@@ -222,7 +222,7 @@ export default function Navbar() {
 
               <a
                 href="/#contato"
-                className="block px-6 py-3 bg-brand-secondary text-white text-center font-roboto font-medium rounded-sm"
+                className="block px-6 py-3 bg-brand-secondary text-black text-center font-roboto font-medium rounded-sm"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Solicitar Demonstração

@@ -105,7 +105,7 @@ export default function Hero() {
             >
               <a
                 href="#contato"
-                className="group px-8 py-4 bg-brand-secondary text-white font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] flex items-center justify-center gap-2 shadow-lg shadow-brand-secondary/30"
+                className="group px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] flex items-center justify-center gap-2 shadow-lg shadow-brand-secondary/30"
               >
                 Solicite uma demonstração
               </a>

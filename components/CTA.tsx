@@ -304,7 +304,7 @@ export default function CTA() {
                         whileTap={sending ? {} : { scale: 0.97 }}
                         type="submit"
                         disabled={sending}
-                        className="w-full px-8 py-4 bg-brand-secondary text-white font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-secondary/25 disabled:opacity-70 disabled:cursor-not-allowed"
+                        className="w-full px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-secondary/25 disabled:opacity-70 disabled:cursor-not-allowed"
                       >
                         {sending ? 'Enviando...' : 'Fale com um especialista'}
                         {!sending && (

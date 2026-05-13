@@ -149,7 +149,7 @@ export default function Achievements() {
         >
           <a
             href="#contato"
-            className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-secondary text-white font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/20"
+            className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/20"
           >
             Tenha eficiência logística
           </a>

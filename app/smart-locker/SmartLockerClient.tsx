@@ -156,7 +156,7 @@ export default function SmartLockerClient() {
             </p>
             <a
               href="#contato"
-              className="inline-flex items-center px-8 py-4 bg-brand-secondary text-white font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/25"
+              className="inline-flex items-center px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/25"
             >
               Quero um smart locker
             </a>
@@ -281,7 +281,7 @@ export default function SmartLockerClient() {
           <div className="text-center mt-14">
             <a
               href="#beneficios"
-              className="inline-flex items-center px-8 py-4 bg-brand-secondary text-white font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/20"
+              className="inline-flex items-center px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/20"
             >
               Ver os benefícios
             </a>
@@ -325,7 +325,7 @@ export default function SmartLockerClient() {
           <div className="text-center">
             <a
               href="#contato"
-              className="inline-flex items-center px-8 py-4 bg-brand-secondary text-white font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/20"
+              className="inline-flex items-center px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/20"
             >
               Quero esses benefícios
             </a>
@@ -393,7 +393,7 @@ export default function SmartLockerClient() {
             <div className="flex justify-center">
               <Link
                 href="/cases/petz"
-                className="inline-flex items-center px-6 py-3 bg-brand-secondary text-white font-roboto font-medium rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.02]"
+                className="inline-flex items-center px-6 py-3 bg-brand-secondary text-black font-roboto font-medium rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.02]"
               >
                 Ver o case completo
               </Link>
@@ -440,7 +440,7 @@ export default function SmartLockerClient() {
           <div className="text-center">
             <a
               href="#contato"
-              className="inline-flex items-center px-8 py-4 bg-brand-secondary text-white font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/20"
+              className="inline-flex items-center px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/20"
             >
               Falar com um especialista
             </a>

@@ -182,7 +182,7 @@ export default function About() {
         >
           <a
             href="#contato"
-            className="group inline-flex min-h-[60px] items-center justify-center gap-3 rounded-md bg-brand-secondary px-8 py-4 sm:px-10 sm:py-5 text-base font-semibold text-white shadow-lg shadow-brand-secondary/20 transition-all duration-300 hover:scale-[1.03] hover:bg-brand-secondary/90"
+            className="group inline-flex min-h-[60px] items-center justify-center gap-3 rounded-md bg-brand-secondary px-8 py-4 sm:px-10 sm:py-5 text-base font-semibold text-black shadow-lg shadow-brand-secondary/20 transition-all duration-300 hover:scale-[1.03] hover:bg-brand-secondary/90"
           >
             <span className="whitespace-nowrap">Automatize a logística</span>
           </a>

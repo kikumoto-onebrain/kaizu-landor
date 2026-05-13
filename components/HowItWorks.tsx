@@ -274,7 +274,7 @@ export default function HowItWorks() {
             href="#contato"
             whileHover={{ scale: 1.04, y: -2 }}
             whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-secondary text-white font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-colors shadow-lg shadow-brand-secondary/20"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-colors shadow-lg shadow-brand-secondary/20"
           >
             Simplifique sua operação
           </motion.a>
