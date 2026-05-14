@@ -4,25 +4,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Package, Smartphone, ChartBar as BarChart2 } from 'lucide-react';
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
-    },
-  },
+const itemTransition = {
+  duration: 0.7,
+  ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
 };
 
 export default function Hero() {
@@ -34,7 +18,6 @@ export default function Hero() {
 
   const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const textY = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
     <section
@@ -68,18 +51,15 @@ export default function Hero() {
       </div>
 
       <motion.div
-        style={{ y: textY, opacity }}
+        style={{ y: textY }}
         className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20"
       >
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             <motion.h1
-              variants={itemVariants}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={itemTransition}
               className="text-5xl lg:text-7xl font-outfit font-bold text-white leading-[1.05] tracking-tight text-center lg:text-left"
             >
               Entregas inteligentes{' '}
@@ -100,7 +80,9 @@ export default function Hero() {
             </p>
 
             <motion.div
-              variants={itemVariants}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...itemTransition, delay: 0.15 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <a
@@ -110,7 +92,7 @@ export default function Hero() {
                 Solicite uma demonstração
               </a>
             </motion.div>
-          </motion.div>
+          </div>
 
           <div className="relative hidden lg:block">
             <div className="relative">
