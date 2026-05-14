@@ -3,7 +3,7 @@
 import { useState, useMemo, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Search, Calendar, ChevronDown, ArrowRight } from 'lucide-react'
 import type { Conteudo, Categoria } from '@/lib/sanity'
 import Navbar from '@/components/Navbar'
@@ -13,7 +13,7 @@ import { ptBR } from 'date-fns/locale'
 
 function ConteudoCard({ conteudo, index }: { conteudo: Conteudo; index: number }) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.07 }}
@@ -63,7 +63,7 @@ function ConteudoCard({ conteudo, index }: { conteudo: Conteudo; index: number }
           </div>
         </div>
       </Link>
-    </motion.div>
+    </m.div>
   )
 }
 
@@ -118,7 +118,7 @@ export default function ConteudosHomeClient({ conteudos, categorias }: Props) {
           className="absolute inset-0 w-full h-full object-cover opacity-20"
         />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -132,7 +132,7 @@ export default function ConteudosHomeClient({ conteudos, categorias }: Props) {
             <p className="text-white/60 font-roboto text-lg max-w-xl">
               Insights, tendências e novidades sobre logística inteligente e gestão de entregas.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

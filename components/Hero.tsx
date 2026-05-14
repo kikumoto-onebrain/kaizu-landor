@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { m, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Package, Smartphone, ChartBar as BarChart2 } from 'lucide-react';
 
@@ -24,7 +24,7 @@ export default function Hero() {
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-primary"
     >
-      <motion.div style={{ y: bgY }} className="absolute inset-0">
+      <m.div style={{ y: bgY }} className="absolute inset-0">
         <video
           className="absolute inset-0 w-full h-full object-cover opacity-20"
           autoPlay
@@ -37,7 +37,7 @@ export default function Hero() {
         </video>
 
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/75 via-[#0d2038]/70 to-brand-primary/65" />
-      </motion.div>
+      </m.div>
 
       <div className="absolute inset-0 opacity-[0.04]">
         <div
@@ -50,7 +50,7 @@ export default function Hero() {
         />
       </div>
 
-      <motion.div
+      <m.div
         style={{ y: textY }}
         className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20"
       >
@@ -60,7 +60,7 @@ export default function Hero() {
               Entregas inteligentes{' '}
               <span className="relative inline-block">
                 <span className="text-brand-highlight">começam aqui</span>
-                <motion.span
+                <m.span
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ delay: 1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -74,7 +74,7 @@ export default function Hero() {
               entregas, retiradas e gestão logística.
             </p>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...itemTransition, delay: 0.15 }}
@@ -86,7 +86,7 @@ export default function Hero() {
               >
                 Solicite uma demonstração
               </a>
-            </motion.div>
+            </m.div>
           </div>
 
           <div className="relative hidden lg:block">
@@ -169,22 +169,22 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </m.div>
 
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.6 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center"
       >
-        <motion.div
+        <m.div
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-5 h-8 border border-white/20 rounded-full flex items-start justify-center pt-1.5"
         >
           <div className="w-1 h-1.5 bg-white/40 rounded-full" />
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </section>
   );
 }

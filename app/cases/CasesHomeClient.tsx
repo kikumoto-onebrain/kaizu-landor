@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import type { Case } from '@/lib/sanity'
 import Navbar from '@/components/Navbar'
@@ -37,7 +37,7 @@ const depoimentos = [
 
 function CaseCard({ item, index }: { item: Case; index: number }) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
@@ -89,7 +89,7 @@ function CaseCard({ item, index }: { item: Case; index: number }) {
           </div>
         </div>
       </Link>
-    </motion.div>
+    </m.div>
   )
 }
 
@@ -115,7 +115,7 @@ export default function CasesHomeClient({ cases }: { cases: Case[] }) {
           }}
         />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -129,7 +129,7 @@ export default function CasesHomeClient({ cases }: { cases: Case[] }) {
             <p className="text-white/60 font-roboto text-lg max-w-xl">
               Projetos reais entregues para empresas líderes de mercado. Veja como a Stoom transforma operações logísticas.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -155,7 +155,7 @@ export default function CasesHomeClient({ cases }: { cases: Case[] }) {
       {/* Depoimentos */}
       <section className="bg-brand-primary py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -167,11 +167,11 @@ export default function CasesHomeClient({ cases }: { cases: Case[] }) {
             <h2 className="font-outfit font-bold text-3xl text-white">
               Quem confia na Stoom
             </h2>
-          </motion.div>
+          </m.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {depoimentos.map((d, i) => (
-              <motion.div
+              <m.div
                 key={d.nome}
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -190,7 +190,7 @@ export default function CasesHomeClient({ cases }: { cases: Case[] }) {
                   <p className="font-outfit font-semibold text-white text-sm">{d.nome}</p>
                   <p className="font-roboto text-white/50 text-xs mt-0.5">{d.cargo} · {d.empresa}</p>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

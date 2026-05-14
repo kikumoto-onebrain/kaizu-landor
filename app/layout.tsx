@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import MotionProvider from '@/components/MotionProvider';
 
 const outfit = localFont({
   src: './fonts/outfit-latin.woff2',
@@ -150,8 +151,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        {children}
-        <WhatsAppButton />
+        <MotionProvider>
+          {children}
+          <WhatsAppButton />
+        </MotionProvider>
       </body>
     </html>
   );

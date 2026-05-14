@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { m, useInView, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
 import {
   Truck,
@@ -87,7 +87,7 @@ export default function HowItWorks() {
       ref={sectionRef}
       className="py-24 lg:py-32 bg-brand-light relative overflow-hidden"
     >
-      <motion.div
+      <m.div
         style={{ y: bgY }}
         className="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-highlight/6 rounded-full blur-3xl pointer-events-none"
       />
@@ -106,32 +106,32 @@ export default function HowItWorks() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-center mb-16"
         >
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.1, duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-2 bg-brand-highlight/10 rounded-full mb-6"
           >
-            <motion.div
+            <m.div
               animate={{ scale: [1, 1.5, 1] }}
               transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
               className="w-2 h-2 bg-brand-highlight rounded-full"
             />
             <span className="text-brand-primary font-roboto font-medium">Como Funciona</span>
-            <motion.div
+            <m.div
               animate={{ scale: [1, 1.5, 1] }}
               transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
               className="w-2 h-2 bg-brand-highlight rounded-full"
             />
-          </motion.div>
+          </m.div>
 
-          <motion.h2
+          <m.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.15, duration: 0.7, ease: 'easeOut' }}
@@ -139,9 +139,9 @@ export default function HowItWorks() {
           >
             Simples para quem entrega.{' '}
             <span className="text-brand-secondary">Rápido para quem recebe.</span>
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.25, duration: 0.6 }}
@@ -149,10 +149,10 @@ export default function HowItWorks() {
           >
             O processo foi desenhado para ser intuitivo do início ao fim, tanto para o entregador
             quanto para o destinatário.
-          </motion.p>
-        </motion.div>
+          </m.p>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.35, duration: 0.6 }}
@@ -160,7 +160,7 @@ export default function HowItWorks() {
         >
           <div className="inline-flex bg-white rounded-2xl p-2 gap-2 shadow-sm border border-white/70">
             {(['abastecimento', 'retirada'] as const).map((t) => (
-              <motion.button
+              <m.button
                 key={t}
                 onClick={() => setTab(t)}
                 whileTap={{ scale: 0.96 }}
@@ -169,7 +169,7 @@ export default function HowItWorks() {
                 }`}
               >
                 {tab === t && (
-                  <motion.div
+                  <m.div
                     layoutId="tab-bg"
                     className="absolute inset-0 bg-brand-primary rounded-xl shadow-md"
                     transition={{ type: 'spring', stiffness: 300, damping: 28 }}
@@ -178,21 +178,21 @@ export default function HowItWorks() {
                 <span className="relative z-10">
                   {t === 'abastecimento' ? 'Fluxo de Abastecimento' : 'Fluxo de Retirada'}
                 </span>
-              </motion.button>
+              </m.button>
             ))}
           </div>
-        </motion.div>
+        </m.div>
 
         <div className="relative">
           <div className="hidden lg:block absolute top-10 left-[calc(12.5%-1px)] right-[calc(12.5%-1px)] h-[3px] bg-gray-200 z-0 overflow-hidden rounded-full">
-            <motion.div
+            <m.div
               style={{ width: lineProgress }}
               className="h-full bg-brand-highlight origin-left rounded-full"
             />
           </div>
 
           <AnimatePresence mode="wait">
-            <motion.div
+            <m.div
               key={tab}
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -201,7 +201,7 @@ export default function HowItWorks() {
               className="grid grid-cols-2 lg:grid-cols-4 gap-8 relative z-10"
             >
               {flows[tab].map((step, i) => (
-                <motion.div
+                <m.div
                   key={`${tab}-${i}`}
                   initial={{ opacity: 0, y: 30, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -209,15 +209,15 @@ export default function HowItWorks() {
                   className="flex flex-col items-center text-center group"
                 >
                   <div className="relative mb-6">
-                    <motion.div
+                    <m.div
                       whileHover={{ scale: 1.12, rotate: 3 }}
                       transition={{ type: 'spring', stiffness: 300, damping: 18 }}
                       className="w-20 h-20 rounded-2xl bg-brand-primary flex items-center justify-center shadow-lg cursor-default"
                     >
                       <step.icon size={28} className="text-white" />
-                    </motion.div>
+                    </m.div>
 
-                    <motion.div
+                    <m.div
                       initial={{ scale: 0, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{
@@ -231,9 +231,9 @@ export default function HowItWorks() {
                       <span className="text-brand-primary text-[10px] font-outfit font-bold">
                         {step.step}
                       </span>
-                    </motion.div>
+                    </m.div>
 
-                    <motion.div
+                    <m.div
                       initial={{ scale: 0, opacity: 0 }}
                       animate={{ scale: [0, 1.6, 0], opacity: [0, 0.3, 0] }}
                       transition={{ delay: i * 0.12 + 0.1, duration: 0.7, ease: 'easeOut' }}
@@ -241,44 +241,44 @@ export default function HowItWorks() {
                     />
                   </div>
 
-                  <motion.h3
+                  <m.h3
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: i * 0.12 + 0.3, duration: 0.4 }}
                     className="font-outfit font-bold text-brand-primary mb-2 text-base"
                   >
                     {step.title}
-                  </motion.h3>
+                  </m.h3>
 
-                  <motion.p
+                  <m.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: i * 0.12 + 0.4, duration: 0.4 }}
                     className="text-gray-600 font-roboto text-sm leading-relaxed"
                   >
                     {step.desc}
-                  </motion.p>
-                </motion.div>
+                  </m.p>
+                </m.div>
               ))}
-            </motion.div>
+            </m.div>
           </AnimatePresence>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.5 }}
           className="mt-16 text-center"
         >
-          <motion.a
+          <m.a
             href="#contato"
             whileHover={{ scale: 1.04, y: -2 }}
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-colors shadow-lg shadow-brand-secondary/20"
           >
             Simplifique sua operação
-          </motion.a>
-        </motion.div>
+          </m.a>
+        </m.div>
       </div>
     </section>
   );

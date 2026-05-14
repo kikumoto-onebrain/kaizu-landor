@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { m, useInView, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import {
   FileSliders as Sliders,
@@ -40,7 +40,7 @@ export default function Benefits() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <motion.div
+          <m.div
             ref={contentRef}
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -69,7 +69,7 @@ export default function Benefits() {
 
             <div className="space-y-4 max-w-fit mx-auto lg:mx-0 text-left">
               {solutionItems.map((item, i) => (
-                <motion.div
+                <m.div
                   key={i}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -80,11 +80,11 @@ export default function Benefits() {
                     <item.icon size={18} className="text-brand-highlight" />
                   </div>
                   <span className="text-gray-700 font-roboto">{item.text}</span>
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.55, duration: 0.5 }}
@@ -96,12 +96,12 @@ export default function Benefits() {
               >
                 <span className="whitespace-nowrap">Solicite uma demonstração</span>
               </a>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
           <div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <motion.video
+              <m.video
                 style={{
                   scale: imageScale,
                   y: imageY,
@@ -118,7 +118,7 @@ export default function Benefits() {
               />
             </div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.55, duration: 0.5 }}
@@ -130,7 +130,7 @@ export default function Benefits() {
               >
                 <span className="whitespace-nowrap">Solicite uma demonstração</span>
               </a>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </div>

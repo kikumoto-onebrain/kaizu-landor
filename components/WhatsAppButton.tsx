@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppButton() {
@@ -9,7 +9,7 @@ export default function WhatsAppButton() {
   if (pathname?.startsWith('/studio-content')) return null;
 
   return (
-    <motion.a
+    <m.a
       href="https://wa.me/5519971525530?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20lockers%20da%20Stoom."
       target="_blank"
       rel="noopener noreferrer"
@@ -23,7 +23,7 @@ export default function WhatsAppButton() {
     >
       <MessageCircle className="w-8 h-8 text-white" />
 
-      <motion.div
+      <m.div
         className="absolute inset-0 rounded-full border-2 border-green-500"
         animate={{
           scale: [1, 1.5, 1],
@@ -35,6 +35,6 @@ export default function WhatsAppButton() {
           repeatDelay: 10,
         }}
       />
-    </motion.a>
+    </m.a>
   );
 }

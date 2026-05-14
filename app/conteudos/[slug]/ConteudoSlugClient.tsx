@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { ArrowLeft, Calendar } from 'lucide-react'
 import { PortableText, type PortableTextComponents } from '@portabletext/react'
 import type { Conteudo } from '@/lib/sanity'
@@ -105,7 +105,7 @@ export default function ConteudoSlugClient({ conteudo }: { conteudo: Conteudo })
         <div className="absolute inset-0 bg-gradient-to-t from-brand-primary via-brand-primary/50 to-transparent" />
 
         <div className="relative h-full flex flex-col justify-end max-w-4xl mx-auto px-6 lg:px-8 pb-12 pt-32">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -128,7 +128,7 @@ export default function ConteudoSlugClient({ conteudo }: { conteudo: Conteudo })
                 </span>
               </div>
             )}
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { m, useInView, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
@@ -42,7 +42,7 @@ export default function FAQ() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -65,16 +65,16 @@ export default function FAQ() {
               Tire suas dúvidas sobre os smart lockers Stoom e descubra como a solução pode
               transformar sua operação.
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.7, ease: 'easeOut' }}
             className="space-y-2"
           >
             {faqs.map((faq, i) => (
-              <motion.div
+              <m.div
                 key={i}
                 initial={{ opacity: 0, y: 15 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -108,7 +108,7 @@ export default function FAQ() {
 
                 <AnimatePresence initial={false}>
                   {open === i && (
-                    <motion.div
+                    <m.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -118,15 +118,15 @@ export default function FAQ() {
                       <p className="px-6 pb-6 text-gray-600 font-roboto leading-relaxed text-sm">
                         {faq.a}
                       </p>
-                    </motion.div>
+                    </m.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.35, duration: 0.6 }}
@@ -138,7 +138,7 @@ export default function FAQ() {
           >
             Implemente os lockers
           </a>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

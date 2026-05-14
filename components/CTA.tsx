@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { m, useInView, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Send, CircleCheck as CheckCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
@@ -74,21 +74,21 @@ export default function CTA() {
 
   return (
     <section id="contato" ref={sectionRef} className="py-24 lg:py-32 relative overflow-hidden">
-      <motion.div style={{ y: bgY }} className="absolute -top-[15%] -bottom-[15%] left-0 right-0">
+      <m.div style={{ y: bgY }} className="absolute -top-[15%] -bottom-[15%] left-0 right-0">
         <img
           src="/stoom-locker.webp"
           alt="Contato Stoom"
           className="w-full h-full object-cover"
         />
-        <motion.div style={{ opacity: bgOpacity }} className="absolute inset-0 bg-brand-primary" />
-      </motion.div>
+        <m.div style={{ opacity: bgOpacity }} className="absolute inset-0 bg-brand-primary" />
+      </m.div>
 
-      <motion.div
+      <m.div
         animate={{ scale: [1, 1.4, 1], opacity: [0.05, 0.13, 0.05] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-brand-highlight rounded-full blur-3xl pointer-events-none"
       />
-      <motion.div
+      <m.div
         animate={{ x: [0, -60, 0], opacity: [0.04, 0.09, 0.04] }}
         transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
         className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-secondary rounded-full blur-3xl pointer-events-none"
@@ -96,20 +96,20 @@ export default function CTA() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
             className="lg:sticky lg:top-32 space-y-8 text-center lg:text-left"
           >
             <div>
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, scale: 0.85, y: 10 }}
                 animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
                 transition={{ delay: 0.1, duration: 0.5 }}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-brand-highlight/15 border border-brand-highlight/20 rounded-full mb-6 mx-auto lg:mx-0"
               >
-                <motion.div
+                <m.div
                   animate={{ opacity: [1, 0.3, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
                   className="w-2 h-2 bg-brand-highlight rounded-full"
@@ -117,9 +117,9 @@ export default function CTA() {
                 <span className="text-brand-highlight font-roboto font-medium text-sm">
                   Fale com a Stoom
                 </span>
-              </motion.div>
+              </m.div>
 
-              <motion.h2
+              <m.h2
                 initial={{ opacity: 0, y: 25 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
@@ -127,25 +127,25 @@ export default function CTA() {
               >
                 Tenha lockers inteligentes{' '}
                 <span className="text-brand-secondary">em sua operação</span>
-              </motion.h2>
+              </m.h2>
             </div>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.28, duration: 0.6 }}
               className="text-white/70 font-roboto text-lg leading-relaxed"
             >
               Converse com um de nossos especialistas e descubra como implementar smart lockers.
-            </motion.p>
-          </motion.div>
+            </m.p>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 50, y: 20 }}
             animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.3, duration: 0.7 }}
@@ -153,7 +153,7 @@ export default function CTA() {
             >
               <AnimatePresence mode="wait">
                 {submitted ? (
-                  <motion.div
+                  <m.div
                     key="success"
                     initial={{ opacity: 0, scale: 0.85 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -161,35 +161,35 @@ export default function CTA() {
                     transition={{ duration: 0.5, type: 'spring', stiffness: 120 }}
                     className="py-16 text-center space-y-5"
                   >
-                    <motion.div
+                    <m.div
                       initial={{ scale: 0, rotate: -30 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ delay: 0.1, type: 'spring', stiffness: 200, damping: 14 }}
                       className="w-20 h-20 bg-brand-highlight/15 border-2 border-brand-highlight/30 rounded-full flex items-center justify-center mx-auto"
                     >
                       <CheckCircle size={36} className="text-brand-highlight" />
-                    </motion.div>
+                    </m.div>
 
-                    <motion.h3
+                    <m.h3
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.25, duration: 0.5 }}
                       className="text-2xl font-outfit font-bold text-white"
                     >
                       Mensagem enviada!
-                    </motion.h3>
+                    </m.h3>
 
-                    <motion.p
+                    <m.p
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.35, duration: 0.5 }}
                       className="text-white/70 font-roboto"
                     >
                       Nossa equipe entrará em contato em breve.
-                    </motion.p>
-                  </motion.div>
+                    </m.p>
+                  </m.div>
                 ) : (
-                  <motion.form
+                  <m.form
                     key="form"
                     onSubmit={handleSubmit}
                     initial={{ opacity: 0 }}
@@ -215,7 +215,7 @@ export default function CTA() {
                           required: true,
                         },
                       ].map((field, i) => (
-                        <motion.div
+                        <m.div
                           key={field.name}
                           initial={{ opacity: 0, y: 12 }}
                           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -233,7 +233,7 @@ export default function CTA() {
                             type={field.type}
                             className="w-full px-4 py-3 bg-white/8 border border-white/15 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-highlight focus:border-transparent text-brand-primary font-roboto text-sm placeholder:text-white/40 transition-all hover:border-white/25"
                           />
-                        </motion.div>
+                        </m.div>
                       ))}
                     </div>
 
@@ -254,7 +254,7 @@ export default function CTA() {
                           required: true,
                         },
                       ].map((field, i) => (
-                        <motion.div
+                        <m.div
                           key={field.name}
                           initial={{ opacity: 0, y: 12 }}
                           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -272,11 +272,11 @@ export default function CTA() {
                             type={field.type}
                             className="w-full px-4 py-3 bg-white/8 border border-white/15 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-highlight focus:border-transparent text-brand-primary font-roboto text-sm placeholder:text-white/40 transition-all hover:border-white/25"
                           />
-                        </motion.div>
+                        </m.div>
                       ))}
                     </div>
 
-                    <motion.div
+                    <m.div
                       initial={{ opacity: 0, y: 12 }}
                       animate={isInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ delay: 0.81, duration: 0.45 }}
@@ -292,14 +292,14 @@ export default function CTA() {
                         placeholder="Conte um pouco sobre sua operação..."
                         className="w-full px-4 py-3 bg-white/8 border border-white/15 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-highlight focus:border-transparent text-brand-primary font-roboto text-sm placeholder:text-white/40 transition-all resize-none hover:border-white/25"
                       />
-                    </motion.div>
+                    </m.div>
 
-                    <motion.div
+                    <m.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={isInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ delay: 0.9, duration: 0.45 }}
                     >
-                      <motion.button
+                      <m.button
                         whileHover={sending ? {} : { scale: 1.02, y: -2 }}
                         whileTap={sending ? {} : { scale: 0.97 }}
                         type="submit"
@@ -308,33 +308,33 @@ export default function CTA() {
                       >
                         {sending ? 'Enviando...' : 'Fale com um especialista'}
                         {!sending && (
-                          <motion.div
+                          <m.div
                             animate={{ x: [0, 4, 0] }}
                             transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
                           >
                             <Send size={18} />
-                          </motion.div>
+                          </m.div>
                         )}
-                      </motion.button>
-                    </motion.div>
+                      </m.button>
+                    </m.div>
 
                     {error && (
                       <p className="text-center text-xs text-red-400 font-roboto">{error}</p>
                     )}
 
-                    <motion.p
+                    <m.p
                       initial={{ opacity: 0 }}
                       animate={isInView ? { opacity: 1 } : {}}
                       transition={{ delay: 1, duration: 0.5 }}
                       className="text-center text-xs text-white/40 font-roboto"
                     >
                       Seus dados estão protegidos conforme a LGPD.
-                    </motion.p>
-                  </motion.form>
+                    </m.p>
+                  </m.form>
                 )}
               </AnimatePresence>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </div>
       </div>
     </section>

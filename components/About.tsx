@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import {
   LayoutDashboard,
@@ -68,7 +68,7 @@ function ProductCard({
   const s = accentStyles[accent];
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay, duration: 0.7, ease: 'easeOut' }}
@@ -110,7 +110,7 @@ function ProductCard({
       <div
         className={`absolute bottom-0 left-0 right-0 h-1 rounded-b-2xl bg-gradient-to-r ${s.gradient} transition-opacity duration-300 opacity-0 group-hover:opacity-100`}
       />
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -123,7 +123,7 @@ export default function About() {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-highlight/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
@@ -144,7 +144,7 @@ export default function About() {
             A Stoom combina lockers inteligentes com uma plataforma digital para automatizar o
             recebimento, armazenamento e retirada de encomendas.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12 lg:mb-16">
           <ProductCard
@@ -174,7 +174,7 @@ export default function About() {
           />
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.55, duration: 0.6 }}
@@ -186,7 +186,7 @@ export default function About() {
           >
             <span className="whitespace-nowrap">Automatize a logística</span>
           </a>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

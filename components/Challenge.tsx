@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { m, useInView, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Users, Scale, Eye, TrendingDown } from 'lucide-react';
 
@@ -33,12 +33,12 @@ export default function Challenge() {
       ref={sectionRef}
       className="py-24 lg:py-32 bg-brand-light relative overflow-hidden"
     >
-      <motion.div
+      <m.div
         style={{ y: bgYLeft }}
         className="absolute -bottom-24 -left-24 w-[620px] h-[620px] bg-brand-secondary/15 rounded-full blur-[110px] pointer-events-none"
       />
 
-      <motion.div
+      <m.div
         style={{ y: bgYRight }}
         className="absolute top-0 right-[-60px] w-[360px] h-[360px] bg-brand-highlight/18 rounded-full blur-[90px] pointer-events-none"
       />
@@ -58,7 +58,7 @@ export default function Challenge() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.9 }}
@@ -71,7 +71,7 @@ export default function Challenge() {
               </div>
             </div>
 
-            <motion.h2
+            <m.h2
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.15 }}
@@ -79,9 +79,9 @@ export default function Challenge() {
             >
               O crescimento das entregas exige{' '}
               <span className="text-brand-secondary">novas soluções</span>
-            </motion.h2>
+            </m.h2>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.25 }}
@@ -89,11 +89,11 @@ export default function Challenge() {
             >
               Com a escalada do e-commerce e das entregas rápidas, condomínios e empresas
               enfrentam desafios cada vez maiores na gestão de encomendas.
-            </motion.p>
+            </m.p>
 
             <div className="space-y-4 mb-8">
               {problems.map((p, i) => (
-                <motion.div
+                <m.div
                   key={i}
                   initial={{ opacity: 0, x: -30 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -104,7 +104,7 @@ export default function Challenge() {
                     <p.icon size={18} className="text-brand-highlight" />
                   </div>
                   <p className="text-gray-700 font-roboto leading-relaxed pt-1.5">{p.text}</p>
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
@@ -112,7 +112,7 @@ export default function Challenge() {
               A automação com lockers inteligentes resolve esses desafios de forma simples e segura.
             </p>
 
-            <motion.a
+            <m.a
               href="/smart-locker"
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -120,18 +120,18 @@ export default function Challenge() {
               className="group hidden lg:inline-flex items-center gap-2 px-8 py-4 bg-brand-secondary text-black font-roboto font-semibold rounded-sm hover:bg-brand-secondary/90 transition-all hover:scale-[1.03] shadow-lg shadow-brand-secondary/20"
             >
               Conheça a solução
-            </motion.a>
-          </motion.div>
+            </m.a>
+          </m.div>
 
           <div className="relative">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.2 }}
               className="relative pb-14 lg:pb-0"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <motion.img
+                <m.img
                   style={{ scale: imageScale, y: imageY, filter: imageBlur }}
                   src="/problema-entrega.webp"
                   alt="Desafio das entregas"
@@ -140,7 +140,7 @@ export default function Challenge() {
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/70 via-brand-primary/10 to-transparent" />
               </div>
 
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 30, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ delay: 0.55 }}
@@ -152,9 +152,9 @@ export default function Challenge() {
                 <div className="text-sm text-gray-600 font-roboto">
                   logística no Brasil movimenta anualmente
                 </div>
-              </motion.div>
+              </m.div>
 
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, x: 20, y: -10 }}
                 animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
                 transition={{ delay: 0.65 }}
@@ -162,10 +162,10 @@ export default function Challenge() {
               >
                 <div className="text-xl font-outfit font-bold">24/7</div>
                 <div className="text-xs font-roboto opacity-90">disponibilidade</div>
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.95 }}
@@ -177,7 +177,7 @@ export default function Challenge() {
               >
                 Conheça a solução
               </a>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </div>

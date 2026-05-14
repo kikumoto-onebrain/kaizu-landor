@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import {
   ShoppingCart,
@@ -89,7 +89,7 @@ export default function Services() {
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-highlight/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
@@ -110,10 +110,10 @@ export default function Services() {
             Nossos lockers inteligentes atendem diversos segmentos com necessidades específicas de
             logística e distribuição.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.7 }}
@@ -148,7 +148,7 @@ export default function Services() {
                       {seg.title}
                     </div>
 
-                    <motion.div
+                    <m.div
                       initial={false}
                       animate={{
                         height: active === i ? 'auto' : 0,
@@ -172,21 +172,21 @@ export default function Services() {
                           </li>
                         ))}
                       </ul>
-                    </motion.div>
+                    </m.div>
                   </div>
                 </div>
               </div>
             ))}
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.7 }}
             className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl hidden lg:block"
           >
             {segments.map((seg, i) => (
-              <motion.img
+              <m.img
                 key={seg.id}
                 src={seg.image}
                 alt={seg.title}
@@ -211,10 +211,10 @@ export default function Services() {
                 </span>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.45, duration: 0.6 }}
@@ -226,7 +226,7 @@ export default function Services() {
           >
             Veja as aplicações
           </a>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

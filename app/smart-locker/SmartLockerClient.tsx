@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useInView } from 'framer-motion'
+import { m, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Link from 'next/link'
 import {
@@ -98,7 +98,7 @@ function SectionWrapper({ children, className = '' }: { children: React.ReactNod
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -106,7 +106,7 @@ function SectionWrapper({ children, className = '' }: { children: React.ReactNod
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }
 
@@ -140,7 +140,7 @@ export default function SmartLockerClient() {
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-brand-secondary rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -160,7 +160,7 @@ export default function SmartLockerClient() {
             >
               Quero um smart locker
             </a>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -180,7 +180,7 @@ export default function SmartLockerClient() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-4">
             {dores.slice(0, 3).map((dor, i) => (
-              <motion.div
+              <m.div
                 key={dor.titulo}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -193,12 +193,12 @@ export default function SmartLockerClient() {
                 </div>
                 <h3 className="font-outfit font-bold text-brand-primary mb-2">{dor.titulo}</h3>
                 <p className="font-roboto text-sm text-gray-600 leading-relaxed">{dor.descricao}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-14">
             {dores.slice(3).map((dor, i) => (
-              <motion.div
+              <m.div
                 key={dor.titulo}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -211,7 +211,7 @@ export default function SmartLockerClient() {
                 </div>
                 <h3 className="font-outfit font-bold text-brand-primary mb-2">{dor.titulo}</h3>
                 <p className="font-roboto text-sm text-gray-600 leading-relaxed">{dor.descricao}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
@@ -243,7 +243,7 @@ export default function SmartLockerClient() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               {etapas.map((etapa, i) => (
-                <motion.div
+                <m.div
                   key={etapa.numero}
                   initial={{ opacity: 0, x: -24 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -258,11 +258,11 @@ export default function SmartLockerClient() {
                     <h3 className="font-outfit font-bold text-brand-primary mb-1">{etapa.titulo}</h3>
                     <p className="font-roboto text-sm text-gray-600 leading-relaxed">{etapa.descricao}</p>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -275,7 +275,7 @@ export default function SmartLockerClient() {
                 <p className="font-outfit font-bold text-white text-lg">Acesso por QR Code ou código</p>
                 <p className="font-roboto text-white/70 text-sm mt-1">Sem app adicional. Funciona em qualquer smartphone.</p>
               </div>
-            </motion.div>
+            </m.div>
           </div>
 
           <div className="text-center mt-14">
@@ -305,7 +305,7 @@ export default function SmartLockerClient() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
             {beneficios.map((b, i) => (
-              <motion.div
+              <m.div
                 key={b.titulo}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -318,7 +318,7 @@ export default function SmartLockerClient() {
                 </div>
                 <h3 className="font-outfit font-bold text-brand-primary mb-2 text-sm">{b.titulo}</h3>
                 <p className="font-roboto text-xs text-gray-600 leading-relaxed">{b.descricao}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
@@ -418,7 +418,7 @@ export default function SmartLockerClient() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
             {diferenciais.map((d, i) => (
-              <motion.div
+              <m.div
                 key={d.titulo}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -433,7 +433,7 @@ export default function SmartLockerClient() {
                   <h3 className="font-outfit font-bold text-brand-primary mb-1">{d.titulo}</h3>
                   <p className="font-roboto text-sm text-gray-600 leading-relaxed">{d.descricao}</p>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 

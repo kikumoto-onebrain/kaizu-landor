@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -119,7 +119,7 @@ const parceiros = [
 
 function LogoCard({ parceiro, index }: { parceiro: typeof parceiros[0]; index: number }) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -146,7 +146,7 @@ function LogoCard({ parceiro, index }: { parceiro: typeof parceiros[0]; index: n
         </span>
       </div>
       <p className="font-roboto text-sm text-gray-600 leading-relaxed">{parceiro.descricao}</p>
-    </motion.div>
+    </m.div>
   )
 }
 
@@ -168,7 +168,7 @@ export default function ParceirosPage() {
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-brand-secondary rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -183,7 +183,7 @@ export default function ParceirosPage() {
             <p className="font-roboto text-xl text-white/70 leading-relaxed">
               Empresas e soluções que integram o ecossistema da Stoom para entregar mais tecnologia, segurança e eficiência aos nossos clientes.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { m, useInView, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import {
   Puzzle,
@@ -73,7 +73,7 @@ export default function Achievements() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -94,19 +94,19 @@ export default function Achievements() {
             Diferenciais que tornam a Stoom a escolha certa para quem busca eficiência logística
             com tecnologia de ponta.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="max-w-5xl mx-auto relative">
           <div className="absolute left-6 top-0 bottom-0 w-[3px] bg-brand-primary/10 rounded-full" />
 
-          <motion.div
+          <m.div
             style={{ height: lineHeight }}
             className="absolute left-6 top-0 w-[3px] bg-brand-highlight rounded-full shadow-[0_0_18px_rgba(76,201,240,0.45)] origin-top"
           />
 
           <div className="space-y-6">
             {diferenciais.map((d, i) => (
-              <motion.div
+              <m.div
                 key={i}
                 initial={{ opacity: 0, x: -30 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -114,7 +114,7 @@ export default function Achievements() {
                 className="relative flex items-start gap-6 group"
               >
                 <div className="relative z-10 flex-shrink-0">
-                  <motion.div
+                  <m.div
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ delay: i * 0.12 + 0.2, duration: 0.4, type: 'spring' }}
@@ -123,10 +123,10 @@ export default function Achievements() {
                   >
                     <d.icon size={20} className="text-brand-primary" />
                     <div className="absolute inset-0 rounded-full ring-4 ring-brand-highlight/10" />
-                  </motion.div>
+                  </m.div>
                 </div>
 
-                <motion.div
+                <m.div
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                   className="flex-1 bg-white/90 backdrop-blur-sm border border-slate-200 rounded-2xl p-6 shadow-[0_12px_30px_rgba(15,40,66,0.06)] group-hover:border-brand-highlight/25 group-hover:shadow-[0_18px_40px_rgba(15,40,66,0.09)] transition-all duration-300"
@@ -135,13 +135,13 @@ export default function Achievements() {
                     {d.title}
                   </h3>
                   <p className="text-gray-600 font-roboto leading-relaxed text-sm">{d.desc}</p>
-                </motion.div>
-              </motion.div>
+                </m.div>
+              </m.div>
             ))}
           </div>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.75, duration: 0.5 }}
@@ -153,7 +153,7 @@ export default function Achievements() {
           >
             Tenha eficiência logística
           </a>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

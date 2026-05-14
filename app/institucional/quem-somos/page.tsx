@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
@@ -40,7 +40,7 @@ export default function QuemSomosPage() {
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-brand-secondary rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -55,7 +55,7 @@ export default function QuemSomosPage() {
             <p className="font-roboto text-xl text-white/70 leading-relaxed">
               Mais de 10 anos transformando a logística de entregas com tecnologia de smart lockers acessível, segura e conectada.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -63,7 +63,7 @@ export default function QuemSomosPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -83,9 +83,9 @@ export default function QuemSomosPage() {
                   Atendemos empresas como Petz, Tenda Atacado, iFood Shop e Zee.Dog — parceiros que confiam na Stoom para elevar a experiência de entrega dos seus clientes.
                 </p>
               </div>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -103,7 +103,7 @@ export default function QuemSomosPage() {
                   Desde 2014 transformando a logística de entregas com tecnologia
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function QuemSomosPage() {
       {/* Missão, Visão e Valores */}
       <section className="py-24 bg-brand-light">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -121,11 +121,11 @@ export default function QuemSomosPage() {
             <h2 className="font-outfit text-4xl font-bold text-brand-primary mb-4">
               Missão, Visão e Valores
             </h2>
-          </motion.div>
+          </m.div>
 
           {/* Missão + Visão ao lado da imagem */}
           <div className="grid lg:grid-cols-2 gap-10 items-stretch mb-12">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -145,9 +145,9 @@ export default function QuemSomosPage() {
                   Ser a referência em smart lockers e gestão de entregas no Brasil, impulsionando a transformação logística com tecnologia acessível e escalável.
                 </p>
               </div>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -160,11 +160,11 @@ export default function QuemSomosPage() {
                 fill
                 className="object-cover"
               />
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Valores */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -178,14 +178,14 @@ export default function QuemSomosPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Ecossistema Landor */}
       <section className="py-24 bg-brand-primary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -201,7 +201,7 @@ export default function QuemSomosPage() {
             <p className="font-roboto text-white/70 text-lg max-w-2xl mx-auto mb-12">
               A Stoom integra a Landor, uma holding de tecnologia que reúne empresas especializadas para resolver desafios complexos de forma integrada. Juntas, cobrimos todo o ciclo de transformação digital.
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-5 items-stretch mb-10">
             {ecosistema.map((empresa, i) => {
@@ -218,7 +218,7 @@ export default function QuemSomosPage() {
                 </>
               )
               return (
-                <motion.div
+                <m.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -233,7 +233,7 @@ export default function QuemSomosPage() {
                   ) : (
                     <div className={cardClass}>{inner}</div>
                   )}
-                </motion.div>
+                </m.div>
               )
             })}
           </div>

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { ArrowLeft } from 'lucide-react'
 import { PortableText, type PortableTextComponents } from '@portabletext/react'
 import type { Case } from '@/lib/sanity'
@@ -101,7 +101,7 @@ export default function CaseSlugClient({ item }: { item: Case }) {
         <div className="absolute inset-0 bg-gradient-to-t from-brand-primary via-brand-primary/60 to-brand-primary/30" />
 
         <div className="relative h-full flex flex-col justify-end max-w-4xl mx-auto px-6 lg:px-8 pb-12 pt-32">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -116,7 +116,7 @@ export default function CaseSlugClient({ item }: { item: Case }) {
             <h1 className="font-outfit font-bold text-3xl md:text-4xl text-white leading-tight">
               {item.titulo}
             </h1>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
