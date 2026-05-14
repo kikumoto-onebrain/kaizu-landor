@@ -56,12 +56,7 @@ export default function Hero() {
       >
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={itemTransition}
-              className="text-5xl lg:text-7xl font-outfit font-bold text-white leading-[1.05] tracking-tight text-center lg:text-left"
-            >
+            <h1 className="text-5xl lg:text-7xl font-outfit font-bold text-white leading-[1.05] tracking-tight text-center lg:text-left">
               Entregas inteligentes{' '}
               <span className="relative inline-block">
                 <span className="text-brand-highlight">começam aqui</span>
@@ -72,7 +67,7 @@ export default function Hero() {
                   className="absolute -bottom-1 left-0 right-0 h-[3px] bg-brand-highlight origin-left rounded-full"
                 />
               </span>
-            </motion.h1>
+            </h1>
 
             <p className="text-xl text-white/80 font-roboto leading-relaxed max-w-lg text-center lg:text-left mx-auto lg:mx-0">
               Lockers conectados a uma plataforma completa para automatizar
